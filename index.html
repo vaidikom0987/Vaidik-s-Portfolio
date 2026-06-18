@@ -272,44 +272,219 @@ html{
   transform:translateY(-40px);
 }
 
-@media(max-width:992px){
-  .project-stack{
-    width:100%;
-    max-width:420px;
-    height:480px;
-  }
-
-  .image-box img{
-    width:280px;
-  }
-
-  .social-icons{
+.mobile-text{
     display:none;
-  }
-
-  .left-text,.right-text{
-    position:static;
-    text-align:center;
-    margin-bottom:20px;
-  }
-
-  .hero-content{
-    flex-direction:column;
-  }
-
-  .left-text h1,
-  .right-text h1{
-    font-size:45px;
-  }
-
-  .navbar{
-    padding:20px;
-  }
-
-  .nav-links{
-    gap:20px;
-  }
 }
+
+@media (max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .desktop-text{
+        display:none;
+    }
+
+    .mobile-text{
+        display:inline-block;
+        color:white;
+        font-size:26px;
+        font-weight:700;
+        letter-spacing:0.5px;
+    }
+
+    .logo{
+        display:block;
+        text-align:center;
+        margin-top:10px;
+        margin-bottom:15px;
+    }
+
+    .navbar{
+        position:relative;
+        padding:20px 20px 10px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        gap: 30px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .nav-links a{
+        font-size:18px;
+    }
+
+    .hero{
+        min-height:auto !important;
+        height:auto !important;
+        padding:30px 20px 60px !important;
+    }
+
+    .hero-content{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:flex-start !important;
+        height:auto;
+        gap:15px;
+        text-align:center;
+        padding-top:0;
+    }
+
+    .left-text,
+    .right-text{
+        position:static !important;
+        width:100%;
+        text-align:center;
+        margin:0 auto;
+    }
+
+    .left-text h3{
+        font-size:22px;
+    }
+
+    .left-text h1{
+        font-size:35px;
+        line-height:1.1;
+    }
+
+    .right-text{
+        max-width:500px;
+        margin:0 auto;
+    }
+
+    .right-text h3{
+        font-size:25px;
+    }
+
+    .right-text h1{
+        font-size:36px;
+        line-height:1.15;
+    }
+
+    .right-text p{
+        width:100%;
+        max-width:100%;
+        margin:20px auto 0;
+        text-align:center;
+        font-size:16px;
+        line-height:1.9;
+        padding:0 10px;
+    }
+
+    .image-box{
+        margin:10px 0;
+    }
+
+    .image-box img{
+        width:280px;
+        max-width:90%;
+        height:auto;
+    }
+
+    .glow{
+        width:260px;
+        height:260px;
+    }
+
+    .social-icons{
+        display:none;
+    }
+
+    .resume-btn{
+        position:static;
+        display:block;
+        text-align:center;
+        margin-top:25px;
+    }
+
+    section{
+        padding-left:24px !important;
+        padding-right:24px !important;
+    }
+
+    #resume{
+        padding-top:100px !important;
+        padding-bottom:100px !important;
+    }
+
+    #projects{
+        padding-top:120px !important;
+        padding-bottom:120px !important;
+    }
+
+    #about{
+        padding-top:120px !important;
+        padding-bottom:120px !important;
+    }
+
+    #contact{
+        padding-top:100px !important;
+        padding-bottom:100px !important;
+    }
+
+    #resume h1,
+    #projects h1,
+    #about h1,
+    #contact h1{
+        font-size:36px;
+        margin-bottom:50px;
+    }
+
+    #resume h2{
+        font-size:30px;
+    }
+
+    #resume img{
+        width:150px !important;
+    }
+
+    .project-stack{
+        width:100%;
+        max-width:350px;
+        height:450px;
+        margin:auto;
+    }
+
+    .stack-card{
+        padding:18px;
+    }
+
+    .stack-card h2{
+        font-size:20px;
+    }
+
+    .stack-card p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .stack-card img{
+        width:100%;
+        height:auto;
+    }
+
+    #about h2{
+        font-size:32px;
+        text-align:center;
+    }
+
+    #about p{
+        text-align:center;
+        font-size:16px;
+        line-height:1.9;
+    }
+
+    img{
+        max-width:100%;
+        height:auto;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -347,7 +522,10 @@ html{
 <section class="hero" id="home">
 
   <nav class="navbar">
-    <div class="logo">Vaidik</div>
+    <div class="logo">
+    <span class="desktop-text">Vaidik</span>
+    <span class="mobile-text">My Portfolio</span>
+</div>
     <ul class="nav-links">
       <li><a href="#projects">Projects</a></li>
       <li><a href="#about">About me</a></li>
@@ -359,7 +537,7 @@ html{
 
     <div class="left-text">
       <h3>Hello, I'm</h3>
-      <h1>Vaidik<br>Om</h1>
+      <h1>Vaidik </h1>
     </div>
 
     <div class="image-box">
@@ -368,8 +546,8 @@ html{
     </div>
 
     <div class="right-text">
-      <h3>Creative<br>UI/UX Designer &</h3>
-      <h1>Content Creator<span style="font-size:32px;font-weight:600;color:#bdbdbd;font-family:'Poppins',sans-serif;"></span> </h1>
+      <h3>Creative<br></h3>
+      <h1>UI/UX Designer <span style="font-size:32px;font-weight:600;color:#bdbdbd;font-family:'Poppins',sans-serif;"></span> </h1>
       <p style="margin-top:25px;color:#bdbdbd;max-width:320px;line-height:1.8;font-size:15px;">
         Engineering student exploring technology, UI/UX design, creative content, photography, and the mysteries of space — turning ideas into meaningful experiences people remember.
       </p>
